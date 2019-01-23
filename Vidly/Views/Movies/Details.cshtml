@@ -1,0 +1,11 @@
+﻿@model Vidly.Models.Movie
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<p>Genre: @Model.Genre.Name</p>
+<p>Release Date: @Model.ReleaseDate.ToShortDateString()</p>
+<p>Date added: @Model.AddedDate.ToShortDateString()</p>
+<p>Number in stock is: @Model.Stock</p>
+
