@@ -10,18 +10,18 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter customer's name.")]
         [StringLength(255)]
         public string Name { get; set; }
 
         [Display(Name = "Date of birth")] // if we want the label in the view to display a name different from the model field name
+        [Min18YearsIfAMember]
         public DateTime? Birthday { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
 
         public MembershipType MembershipType { get; set; }
 
-        [Required]
         [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
     }
