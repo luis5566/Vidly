@@ -44,8 +44,6 @@ namespace Vidly.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-            var errors = ModelState.Values.SelectMany(v => v.Errors);
-
             if (!ModelState.IsValid)
             {
                 var viewModel = new CustomerFormViewModel()
