@@ -23,8 +23,10 @@ namespace Vidly.Models
 
         [Required]
         [Display(Name = "Number in Stock")]
-        [Range(1,20)]
+        [Range(1, 20)]
         public long Stock { get; set; }
+
+        public long Availability { get; set; }
 
         public Genre Genre { get; set; }
 
